@@ -1,0 +1,76 @@
+/*
+    English Portal: estilo base
+    Sistema Visual: cores, fontes e estilos globais
+*/
+
+/*1. Variáveis (tokens de design)*/
+:root{
+    --bg: #f4f6f9;
+    --surface: #ffffff;
+    --ink: #16213a;
+    --muted: #5a6478;
+    --line: #dde2ea;
+    --mark: #ffe066;    /* amarelo marca texto */
+    --accent: #2f5bd3;  /* azul de destaque (foco, links) */
+    --sucess: #0f7c74;  /* verde azulado */
+    --danger: #c2513a;  /* terracota, para erros */
+    --danger-soft: #f8e9e5;
+
+    --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --f-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+    --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+    color-scheme: light;
+}
+
+/* Modo escuro automático, conforme a preferência do sistema */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #10151f;
+        --surface: #182030;
+        --ink: #e8ecf3;
+        --muted: #9aa4b7;
+        --line: #2a3446;
+        --mark: #e8c547;
+        --accent: #8aa8ff;
+        --sucess: #4fc2b6;
+        --danger: #f08f78;
+        --danger-soft: #3a2420;
+        color-scheme: dark;
+    }
+}
+
+/* 2. Estilos globais */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--f-display);
+    margin: 0;
+    text-wrap: balance;
+}
+
+a {
+    color: inherit;
+}
+
+:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
