@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Entrar - English Portal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+    <main class="auth-card">
+        <header class="auth-header">
+            <p class="eyebrow">English Portal</p>
+            <h1>Bem Vindo <span class="h1">de volta</span></h1>
+            <p class="lead">Entre com seu e-mail e senha para continuar seus estudos.<p>
+        </header>
+
+        <form id="login-form">
+            <div class="field">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+                <label for="password">Senha</label>
+                <input id="password" name="password" type="password" autocomplete="current-password" required>
+            </div>
+
+            <p id="form-error" class="form-error" role="alert" hidden></p>
+
+            <button type="submit" class="btn">Entrar</button>
+        </form>
+
+        <p class="auth-switch">Ainda não tem conta? <a href="register.html">Cadastre-se</a></p>
+    </main>
+</body>
+</html>
