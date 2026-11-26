@@ -217,3 +217,29 @@ h1 {
 .auth-switch a:hover {
   background: var(--mark);
 }
+
+
+/* Garante que o atributo hidden esconda o elemento */
+[hidden] {
+  display: none !important;
+}
+
+/* Mensagem de erro do formulário */
+.form-error {
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--danger-soft);
+  border: 1px solid var(--danger);
+  border-left-width: 4px;
+  border-radius: 12px;
+}
+
+/* Telas pequenas */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+}
