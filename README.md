@@ -16,4 +16,4 @@ Interface Web do English Portal, um portal de estudo de inglês. Esta primeira f
 
 ## Status
 
-Em desenvolvimento. Base visual criada. Em breve: telas de login e cadastro.
+Em desenvolvimento. Base visual e tela de login (apenas visual).Em breve: tela de cadastro e integração com a API.
