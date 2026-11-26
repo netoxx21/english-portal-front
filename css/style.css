@@ -94,3 +94,152 @@ h1 {
     font-weight: 700;
     letter-spacing: -0.01em;
 }
+
+
+/* Página de autenticação: centraliza o card na tela */
+.auth-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 32px 28px;
+}
+
+.auth-header {
+  margin-bottom: 28px;
+}
+
+.auth-card h1 {
+  font-size: clamp(30px, 8vw, 38px);
+}
+
+/* Rótulo pequeno em caixa alta, acima dos títulos */
+.eyebrow {
+  margin: 0 0 12px;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.lead {
+  margin: 12px 0 0;
+  color: var(--muted);
+}
+
+
+/* Campos de formulário */
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+}
+
+.field input:focus-visible {
+  border-color: var(--accent);
+}
+
+/* Botão principal (formato pílula) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 13px 22px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--bg);
+  background: var(--ink);
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
+
+/* Link para a outra tela (login <-> cadastro) */
+.auth-switch {
+  margin: 22px 0 0;
+  text-align: center;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.auth-switch a {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration-color: var(--mark);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
+}
+
+.auth-switch a:hover {
+  background: var(--mark);
+}
+
+
+/* Garante que o atributo hidden esconda o elemento */
+[hidden] {
+  display: none !important;
+}
+
+/* Mensagem de erro do formulário */
+.form-error {
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--danger-soft);
+  border: 1px solid var(--danger);
+  border-left-width: 4px;
+  border-radius: 12px;
+}
+
+/* Telas pequenas */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+}
